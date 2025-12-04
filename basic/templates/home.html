@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cell-Phone-Analysts</title>
+</head>
+
+<body>
+    <h1>Car MPG Prediction</h1>
+    <form action="/predict" method="POST">
+        <label for="Lot Area">Lot Area:</label>
+        <input type="text" name="Lot Area" required><br>
+        <label for="Year Built">Year Built:</label>
+        <input type="text" name="Year Built" required><br>
+        <label for="Full Bath">Full Bath:</label>
+        <input type="text" name="Full Bath" required><br>
+        <label for="Fireplace">Fireplace:</label>
+        <input type="text" name="Fireplace" required><br>
+        <label for="Lot Frontage">Lot Frontage:</label>
+        <input type="text" name="Lot Frontage" required><br>
+        <!-- <label for="model_year">Model Year:</label>
+        <input type="text" name="model_year" required><br>
+        <label for="origin">Origin:</label>
+        <input type="text" name="origin" required><br> -->
+        <button type="submit">Predict</button>
+    </form>
+
+   {% if prediction_test %}
+        <h2>{{ prediction_test }}</h2>
+    {% endif %}
+</body>
+</html>

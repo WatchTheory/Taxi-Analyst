@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% block content %} {% if name and  email %}
+<p>
+    You have logged in as {{ name | capitalize }}. 
+    with an email {{ email }}You may update your profile
+    below
+
+    <!--<h1>Welcome Admin</h1>-->
+    <!--<p>You are an admin!</p>-->
+
+    {% else %}
+    <!--<h1>Welcome member {{ name | capitalize }}</h1>-->
+
+    Please enter information below to update your profile. {% endif %}
+</p>
+
+<form method="POST">
+    {{ form.hidden_tag() }} 
+    {{ form.name.label }}
+    {{ form.email.label }}
+    {{ form.name }} 
+    {{ form.email }} 
+    {{ form.submit
+    }}
+</form>
+
+{% endblock %}
+
+
+
+<!-- {% extends 'base.html' %} {% block content %} {% if name == 'admin' %} <! extend  base html-->
+ 
+<h1>Welcome Admin</h1>
+<p>You are an admin!</p>
+
+{% else %}
+<h1>Welcome member {{ name | capitalize }}</h1>
+{% endif %} {% endblock %} 
+

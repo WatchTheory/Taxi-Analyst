@@ -1,0 +1,25 @@
+{% extends "base.html" %}  <!-- If you have a base template -->
+
+{% block content %}
+<h1>Taxi Fare Prediction</h1>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.distance.label }} {{ form.distance() }}<br>
+    {{ form.tolls.label }} {{ form.tolls() }}<br>
+    {{ form.fare.label }} {{ form.fare() }}<br>
+    <!-- Add more fields here -->
+
+    {{ form.submit() }}
+</form>
+
+{% if prediction %}
+    <h2>Prediction: {{ prediction }}</h2>
+{% endif %}
+{% endblock %}
+
+
+<!-- 
+
+ form.Night.data,
+ form.day_calls.data
+ form.intial_charges_charges.data, -->
