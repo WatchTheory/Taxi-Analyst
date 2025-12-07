@@ -2,8 +2,24 @@
 Analyzing Taxi Dataset 
 
 
+## Goal 
+
+
 ## Project Overview 
 This is to explore and discover the taxi dataset. Using data analysis to discover meaningful insight into this dataset.
+
+
+## Data Dictionary
+
+
+
+
+
+
+
+
+
+
 
 
 ## Project Statement
